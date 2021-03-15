@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="inventory_balance_report_form" model="ir.ui.view">
+        <field name="name">inventory.balance.report.form</field>
+        <field name="model">inventory.trial.balance.report.wizard</field>
+        <field name="arch" type="xml">
+             <form>
+                 <notebook>
+                     <page string="Filtros">
+                         <group col="4">
+                             <field name="date_from"/>
+                             <field name="date_to"/>
+                             <newline/>
+                             <field name="product_id"/>
+                             <field name="category_id"/>
+                         </group>
+                     </page>
+                     <page string="Cuentas contables">
+                         <field name="account_ids"/>
+                     </page>
+                 </notebook>
+                  <footer>
+
+                       <button type="object" name="generate_excel" string="Excel" class="oe_highlight"/>
+                      <button special="cancel" string="Cancelar" class="oe_link"/>
+                  </footer>
+                </form>
+        </field>
+    </record>
+
+
+     <record id="action_inventory_balance_report" model="ir.actions.act_window">
+            <field name="name">Balance de comprobación de inventario</field>
+            <field name="res_model">inventory.trial.balance.report.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="inventory_balance_report_form"/>
+            <field name="target">new</field>
+     </record>
+
+     <menuitem id="menu_inventory_balance_report"
+                  name="Balance de comprobación de inventario"
+                  action="action_inventory_balance_report"
+                  parent="account.account_reports_management_menu"
+                  sequence="40"
+                 />
+</odoo>
