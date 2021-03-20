@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="view_account_analytic_account_responsible_form" model="ir.ui.view">
+            <field name="name">view.account.analytic.account.responsible.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+            <field name="arch" type="xml">
+	        	<xpath expr="//field[@name='partner_id']" position="after">
+	        		<field name="financial_responsible_id"/>
+	        		<field name="sales_responsible_id"/>
+	        	</xpath>
+            </field>
+        </record>
+
+        <record id="view_account_analytic_account_responsible_search" model="ir.ui.view">
+            <field name="name">view.account.analytic.account.responsible.search</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_search"/>
+            <field name="arch" type="xml">
+	        	<xpath expr="//field[@name='partner_id']" position="after">
+	        		<field name="financial_responsible_id"/>
+	        		<field name="sales_responsible_id"/>
+	        	</xpath>
+	        	<xpath expr="//group/filter[@name='associatedpartner']" position="after">
+	        		<filter name="financial_responsible"  string="Responsible financial"
+                                        context="{'group_by':'financial_responsible_id'}"/>
+	        		<filter name="sales_responsible" string="Responsible of sales"
+                                        context="{'group_by':'sales_responsible_id'}"/>
+	        	</xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

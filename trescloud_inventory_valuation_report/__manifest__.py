@@ -12,7 +12,7 @@
     'author': 'TRESCLOUD CIA LTDA',
     'maintainer': 'TRESCLOUD CIA. LTDA.',
     'license': 'OEEL-1',
-    'depends': ['base', 'account', 'ecua_kardex'],
+    'depends': ['base', 'account', 'trescloud_kardex'],
     'data': [
         'security/ir.model.access.csv',
         'views/res_company_view.xml',

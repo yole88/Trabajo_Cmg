@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_loss_profit_cost_center_form" model="ir.ui.view">
+            <field name="name">view.loss.profit.cost.center.form</field>
+            <field name="model">wizard.loss.profit.cost.center</field>
+            <field name="arch" type="xml">
+                <form string="Profit and loss by business unit">
+                	<notebook>
+                    	<page name="page1" string="Time filters">
+                    		<p>select the date range you want to analyze.</p>
+                    		<group>
+                    			<field name="report" required="1" invisible="1"/>
+                    			<field name="date_start" required="1"/>
+                        		<field name="date_end" required="1"/>
+                        		<field name="detail_by_period" attrs="{'invisible': [('report', '!=', 'report_1')]}"/>
+                        		<field name="include_archived"/>
+			                </group>
+						</page>
+						<page name="page2" string="Cost center filters">
+							<p>In case you do not select any cost center, it is assumed that you want to analyze all of them.</p>
+                                <group string="Cost centers">
+                                    <field name="analytic_ids" nolabel="1">
+										<tree string="Cost centers">
+											<field name="code"/>
+											<field name="name" string="Cost centers"/>
+											<field name="financial_responsible_id"/>
+											<field name="sales_responsible_id"/>
+										</tree>
+									</field>
+                                </group>
+						</page>
+					</notebook>
+                    <footer>
+                        <button name="action_export_excel" string="Export excel" type="object" class="oe_highlight"/>
+                         o
+                        <button special="cancel" string="Close" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <record id="action_loss_profit_cost_center" model="ir.actions.act_window">
+            <field name="name">Profit and loss by business unit</field>
+            <field name="res_model">wizard.loss.profit.cost.center</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_loss_profit_cost_center_form"/>
+            <field name="target">new</field>
+         </record>
+
+        <menuitem id="menu_loss_profit_cost_center"
+                  action="action_loss_profit_cost_center"
+                  parent="account.account_reports_management_menu"
+                  sequence="50"/>
+</odoo>

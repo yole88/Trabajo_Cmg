@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+	  <record id="view_hr_medical_checkup_tree" model="ir.ui.view">
+            <field name="name">hr.medical.checkup.tree</field>
+            <field name="model">hr.medical.checkup</field>
+            <field name="arch" type="xml">
+                <tree string="Medical checkup">
+                    <field name="employee_id"/>
+                    <field name="date_revision"/>
+                    <field name="number_employee"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+	  </record>
+
+	 <record id="view_hr_medical_checkup_form" model="ir.ui.view">
+            <field name="name">hr.medical.checkup.form</field>
+            <field name="model">hr.medical.checkup</field>
+            <field name="arch" type="xml">
+                <form string="Medical checkup">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box"/>
+                        <div class="oe_title">
+                            <label for="employee_id" class="oe_edit_only"/>
+                            <h1><field name="employee_id" options="{'no_create': True}"
+                                       placeholder="Select Employee"/></h1>
+                        </div>
+                        <group>
+							<group>
+                                <field name="number_employee"/>
+								<field name="date_revision"/>
+                                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                                <field name="is_future" invisible="1"/>
+                            </group>
+                            <group string=" Result of the review" name="result_review" col="4">
+                                <field name='apt_type' widget="radio" options="{'horizontal': true}"
+                                   nolabel="1" colspan="2"/>
+                                 <field name='done_type' widget="radio" options="{'horizontal': true}"
+                                   nolabel="1" colspan="2" attrs="{'readonly':[('is_future','=', True)]}"/>
+                            </group>
+                        </group>
+                        <div>
+                            <label for="observation"/>
+                            <field name="observation"/>
+                        </div>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                    </div>
+                </form>
+            </field>
+	 </record>
+
+	<record id="view_hr_medical_checkup_search" model="ir.ui.view">
+            <field name="name">hr.medical.checkup.search</field>
+            <field name="model">hr.medical.checkup</field>
+            <field name="arch" type="xml">
+                <search string="Medical checkup">
+                    <field name="employee_id"/>
+					<field name="number_employee"/>
+					<field name="date_revision"/>
+                    <filter name="apt" string="Apt" domain="[('apt_type','=','apt')]"/>
+                    <separator/>
+                    <filter name="no_apt" string="No apt" domain="[('apt_type','=','no_apt')]"/>
+                     <separator/>
+                    <filter name="dome" string="Done" domain="[('done_type','=','done')]"/>
+                    <separator/>
+                    <filter name="no_domne" string="No done" domain="[('done_type','=','no_done')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Employee" name="employee_id" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter string="Company" name="company" domain="[]" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+      <record id="view_hr_medical_checkup_search_bottom" model="ir.ui.view">
+            <field name="name">hr.medical.checkup.search.bottom</field>
+            <field name="model">hr.medical.checkup</field>
+            <field name="arch" type="xml">
+                <search string="Medical checkup">
+                    <field name="employee_id"/>
+					<field name="number_employee"/>
+					<field name="date_revision"/>
+                    <filter name="apt" string="Apt" domain="[('apt_type','=','apt')]"/>
+                    <separator/>
+                    <filter name="no_apt" string="No apt" domain="[('apt_type','=','no_apt')]"/>
+                     <separator/>
+                    <filter name="dome" string="Done" domain="[('done_type','=','done')]"/>
+                    <separator/>
+                    <filter name="no_domne" string="No done" domain="[('done_type','=','no_done')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Company" name="company" domain="[]" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+	 <record id="action_hr_medical_checkup" model="ir.actions.act_window">
+            <field name="name">Medical check-ups</field>
+            <field name="res_model">hr.medical.checkup</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Ready to start your medical check-up??
+              </p><p>
+                Let's create a medical check-up.
+              </p>
+            </field>
+	 </record>
+
+    <record id="action_hr_medical_checkup_bottom" model="ir.actions.act_window">
+            <field name="name">Medical check-ups</field>
+            <field name="res_model">hr.medical.checkup</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_medical_checkup_search_bottom"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Ready to start your medical check-up??
+              </p><p>
+                Let's create a medical check-up.
+              </p>
+            </field>
+	 </record>
+
+     <menuitem
+            action="action_hr_medical_checkup"
+            id="menu_hr_medical_checkup"
+            parent="hr.menu_hr_root"
+            sequence="91"
+           />
+
+     <record id="hr_employee_view_buttons_view" model="ir.ui.view">
+         <field name="name">hr.employee.view.buttons</field>
+         <field name="model">hr.employee</field>
+         <field name="inherit_id" ref="hr.view_employee_form"/>
+         <field name="arch" type="xml">
+             <div name="button_box" position="inside">
+                 <button class="oe_stat_button" type="action" name="%(action_hr_medical_checkup_bottom)d"
+                         icon="fa-eye"
+                          context="{'search_default_employee_id': active_id, 'default_employee_id': active_id}">
+                        <field string="Medical check-ups" name="checkup_count" widget="statinfo"/>
+                 </button>
+             </div>
+         </field>
+     </record>
+
+
+</odoo>

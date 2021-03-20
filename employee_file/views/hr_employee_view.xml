@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_hr_job_inherit" model="ir.ui.view">
+		<field name="name">hr.job.form.view</field>
+		<field name="model">hr.job</field>
+		<field name="inherit_id" ref="hr.view_hr_job_form" />
+		<field name="arch" type="xml">
+             <xpath expr="//group/group/field[@name='no_of_recruitment']" position="after">
+					 <field name="job_code"/>
+			 </xpath>
+		</field>
+	</record>
+
+
+	<record id="view_hr_employee_inherit" model="ir.ui.view">
+		<field name="name">hr.employee.form.view</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id" ref="hr.view_employee_form" />
+		<field name="arch" type="xml">
+             <xpath expr="//notebook/page/group/group/field[@name='job_title']" position="after">
+					 <field name="job_code"/>
+			 </xpath>
+			<xpath expr="//notebook/page[@name='personal_information']/group" position="after">
+					<group colspan="4" string="Other Information" name="other_information">
+					 <group>
+						<field name="expiration_date"/>
+						<field name="number_nss"/>
+						<field name="indicator"/>
+						<field name="advance_amount"/>
+						<field name="antiquity_date"/>
+					 </group>
+					 <group>
+						<field name="clothing_size"/>
+						<field name="shoe_size"/>
+						<field name="pant_size"/>
+						<field name="holiday_group"/>
+						<field name="medical_cost"/>
+					 </group>
+                    </group>
+			 </xpath>
+			 <xpath expr="//notebook/page[@name='personal_information']" position="after">
+                <page string="Conductor Information" >
+					<group>
+						<group string="Driving indicators" name="driving_indicators">
+							   <field name="driving_license"/>
+							   <field name="driving_license_date_start"/>
+							   <field name="driving_license_expiration_date"/>
+						</group>
+						<group string="Indicators ADR" name="adr_indicators">
+							   <field name="indicator_adr"/>
+							   <field name="date_start_adr"/>
+							   <field name="date_expiration_adr"/>
+						</group>
+						<group string="Indicators ADR Cistern" name="adr_indicators_cistern">
+							   <field name="indicator_adr_cistern"/>
+							   <field name="date_start_cistern"/>
+							   <field name="date_expiration_cistern"/>
+						</group>
+						<group string="Digital tachograph card indicators" name="indicators_card">
+							   <field name="indicator_card"/>
+							   <field name="date_start_card"/>
+							   <field name="date_expiration_card"/>
+						</group>
+						<group string="Professional aptitude certificate indicators" name="indicators_certificate">
+							   <field name="indicator_certificate"/>
+							   <field name="date_start_certificate"/>
+							   <field name="date_expiration_certificate"/>
+						</group>
+					</group>
+					<group>
+						<field name="identification_card" />
+						<field name="number_driver" />
+					</group>
+				</page>
+			 </xpath>
+		</field>
+	</record>
+
+</odoo>
