@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
+	<data>
     <record id="view_hr_job_inherit" model="ir.ui.view">
 		<field name="name">hr.job.form.view</field>
 		<field name="model">hr.job</field>
@@ -21,6 +22,9 @@
              <xpath expr="//notebook/page/group/group/field[@name='job_title']" position="after">
 					 <field name="job_code"/>
 			 </xpath>
+			 <xpath expr="//notebook/page/group/group/field[@name='tz']" position="after">
+					 <field name="is_conductor"/>
+			 </xpath>
 			<xpath expr="//notebook/page[@name='personal_information']/group" position="after">
 					<group colspan="4" string="Other Information" name="other_information">
 					 <group>
@@ -40,7 +44,7 @@
                     </group>
 			 </xpath>
 			 <xpath expr="//notebook/page[@name='personal_information']" position="after">
-                <page string="Conductor Information" >
+                <page string="Conductor Information" attrs="{'invisible': [('is_conductor','=', False)]}" >
 					<group>
 						<group string="Driving indicators" name="driving_indicators">
 							   <field name="driving_license"/>
@@ -76,5 +80,20 @@
 			 </xpath>
 		</field>
 	</record>
+
+	<record model="ir.ui.view" id="view_employee_search">
+			<field name="name">hr.employee.search</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='message_needaction']" position="after">
+					<separator />
+					<filter string="Is conductor"
+						name="is_conductor" domain="[('is_conductor','=',True)]"/>
+				</xpath>
+			</field>
+	</record>
+
+	</data>
 
 </odoo>

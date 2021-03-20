@@ -1,0 +1,289 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* employee_file
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-20 12:54+0000\n"
+"PO-Revision-Date: 2021-03-20 12:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__advance_amount
+msgid "Advance amount"
+msgstr "Importe de anticipo"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__indicator
+msgid "Advance indicator"
+msgstr "Indicador de anticipo"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__antiquity_date
+msgid "Antiquity date"
+msgstr "Fecha de antigüedad"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__clothing_size
+msgid "Clothing size"
+msgstr "Talla de ropa"
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Conductor Information"
+msgstr "Inforfmación del conductor"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_expiration_adr
+msgid "Date expiration A.D.R"
+msgstr "Fecha caducidad A.D.R"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_expiration_cistern
+msgid "Date expiration A.D.R Cistern"
+msgstr "Fecha caducidad A.D.R cisterna"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_expiration_cistern
+msgid "Date expiration A.D.R Cistern."
+msgstr "Fecha caducidad A.D.R cisterna."
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_expiration_adr
+msgid "Date expiration A.D.R."
+msgstr "Fecha caducidad A.D.R"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__expiration_date
+msgid "Date expiration DNI"
+msgstr "Fecha caducidad DNI"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_expiration_card
+msgid "Date expiration card"
+msgstr "Fecha de caducidad tarjeta"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_expiration_certificate
+msgid "Date expiration certificate"
+msgstr "Fecha de caducidad del certificado"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_start_adr
+msgid "Date start A.D.R"
+msgstr "Fecha inicio A.D.R"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_start_cistern
+msgid "Date start A.D.R Cistern"
+msgstr "Fecha inicio A.D.R cisterna"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_start_cistern
+msgid "Date start A.D.R Cistern."
+msgstr "Fecha inicio A.D.R cisterna."
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_start_adr
+msgid "Date start A.D.R."
+msgstr "Fecha inicio A.D.R"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_start_card
+msgid "Date start card"
+msgstr "Fecha de inicio tarjeta"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__date_start_certificate
+msgid "Date start certificate"
+msgstr "Fecha de incio del certificado"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__indicator_card
+msgid "Digital tachograph card indicator"
+msgstr "Tarjeta tacógrafo digital"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__indicator_card
+msgid "Digital tachograph card indicator."
+msgstr "Indicador tarjeta tacógrafo digital."
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Digital tachograph card indicators"
+msgstr "Indicadores de tarjeta de tacógrafo digital"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__number_driver
+msgid "Driver number LURBE"
+msgstr "Número de conductor LURBE"
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Driving indicators"
+msgstr "Indicadores de conducción"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__driving_license
+msgid "Driving license"
+msgstr "Carnet de conducir"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__driving_license_expiration_date
+msgid "Driving license expiration date"
+msgstr "Fecha de caducidad carnet conducir"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__driving_license_expiration_date
+msgid "Driving license expiration date."
+msgstr "Fecha de caducidad carnet conducir."
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__driving_license
+msgid "Driving license indicator."
+msgstr "Indicador si tiene carnet de conducir"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__driving_license_date_start
+msgid "Driving license start date"
+msgstr "Fecha de inicio carnet conducir"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__driving_license_date_start
+msgid "Driving license start date."
+msgstr "Fecha de  inicio carnet conducir."
+
+#. module: employee_file
+#: model:ir.model,name:employee_file.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_expiration_card
+msgid "Expiration date of digital tachograph card."
+msgstr "Fecha de caducidad tarjeta tacógrafo digital."
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_expiration_certificate
+msgid "Expiration date professional aptitude certificate."
+msgstr "Fecha de caducidad certificado aptitud profesional"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__holiday_group
+msgid "Holiday group"
+msgstr "Grupo de vacaciones"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__identification_card
+msgid "Identification card"
+msgstr "Tarjeta identificación"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__indicator_adr
+msgid "Indicator A.D.R"
+msgstr "Indicador A.D.R"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__indicator_adr_cistern
+msgid "Indicator A.D.R Cistern"
+msgstr "Indicador A.D.R cisterna"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__indicator_adr_cistern
+msgid "Indicator A.D.R Cistern."
+msgstr "Indicador A.D.R cisterna"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__indicator_adr
+msgid "Indicator A.D.R."
+msgstr "Indicador A.D.R."
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__identification_card
+msgid "Indicator Identification card."
+msgstr "Indicador Tarjeta identificación."
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Indicators ADR"
+msgstr "Indicadores A.D.R"
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Indicators ADR Cistern"
+msgstr "Indicadores A.D.R cisterna"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__is_conductor
+#: model_terms:ir.ui.view,arch_db:employee_file.view_employee_search
+msgid "Is conductor"
+msgstr "Es conductor"
+
+#. module: employee_file
+#: model:ir.model,name:employee_file.model_hr_job
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__job_code
+#: model:ir.model.fields,field_description:employee_file.field_hr_job__job_code
+msgid "Job code"
+msgstr "Código del puesto"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__medical_cost
+msgid "Medical insurance cost"
+msgstr "Importe seguro médico"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__number_nss
+msgid "Number NSS"
+msgstr "Número NSS"
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Other Information"
+msgstr "Otra información"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__pant_size
+msgid "Pant size"
+msgstr "Talla de pantalón"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__indicator_certificate
+msgid "Professional aptitude certificate"
+msgstr "Certificado de aptitud profesional"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__indicator_certificate
+msgid "Professional aptitude certificate indicator."
+msgstr "Indicador certificado aptitud profesional"
+
+#. module: employee_file
+#: model_terms:ir.ui.view,arch_db:employee_file.view_hr_employee_inherit
+msgid "Professional aptitude certificate indicators"
+msgstr "Indicadores del certificado de aptitud profesional"
+
+#. module: employee_file
+#: model:ir.model.fields,field_description:employee_file.field_hr_employee__shoe_size
+msgid "Shoe size"
+msgstr "Talla de calzado"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_start_card
+msgid "Start date of digital tachograph card."
+msgstr "Fecha inicio tarjeta tacógrafo digital"
+
+#. module: employee_file
+#: model:ir.model.fields,help:employee_file.field_hr_employee__date_start_certificate
+msgid "Start date professional aptitude certificate."
+msgstr "Fecha de inicio certificado aptitud profesional."
+
